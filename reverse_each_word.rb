@@ -16,5 +16,5 @@ end
 # method using .collect - (refactored)
 def reverse_each_word(sentence)
   sentence = sentence.split(" ")
-  sentence.collect! { |word| word.reverse }.join(" ")
+  sentence.collect { |word| word.reverse }.join(" ")
 end
