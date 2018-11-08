@@ -1,3 +1,6 @@
+
+=begin
+# method using .each
 def reverse_each_word(sentence)
   sentence_new = sentence.split(" ")
   sentence_final = []
@@ -6,3 +9,14 @@ def reverse_each_word(sentence)
   end
   sentence_final.join(" ")
 end
+
+=end
+
+
+# method using .collect - (refactored)
+def reverse_each_word(sentence)
+  sentence = sentence.split(" ")
+  sentence.collect { |word| word.reverse }
+  sentence = sentence.join(" ")
+end
+
